@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crônicas — Drummond</title>
+    <title>Drummond na Escola — Portal Drummond</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
+<!-- ================= NAVBAR ================= -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
     <div class="container">
         <a class="navbar-brand fw-bold" href="../index.html">Drummond</a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,65 +33,88 @@
         </div>
     </div>
 </nav>
+<!-- ========================================== -->
 
+
+<!-- ================= CONTEÚDO ================= -->
 <section class="container py-5">
-    <h1 class="mb-4">Crônicas</h1>
-    <p class="mb-4">Drummond foi também um grande cronista, observando o cotidiano com humor, ironia e sensibilidade.</p>
+    <h1 class="mb-4">Drummond na Escola</h1>
+    <p class="mb-4">
+        Nesta secção reunimos obras e poemas de Carlos Drummond de Andrade amplamente estudados em escolas,
+        exames e vestibulares. São textos que ajudam alunos a compreender temas como ironia, cotidiano,
+        modernismo e identidade brasileira.
+    </p>
 
     <div class="row">
 
+        <!-- No Meio do Caminho -->
         <div class="col-md-4">
             <div class="card mb-4">
-                <img src="../imagens/temas/cronicas1.jpg" class="card-img-top">
+                <img src="../img/Capa livros/poemas/no-meio-do-caminho.jpg" class="card-img-top" alt="No Meio do Caminho">
                 <div class="card-body">
-                    <h5>Fala, Amendoeira (1957)</h5>
-                    <p>Crônicas leves e reflexivas sobre o cotidiano brasileiro.</p>
-                    <a href="#" class="btn btn-dark">Ler análise</a>
+                    <h5>No Meio do Caminho</h5>
+                    <p>Um dos poemas mais famosos e debatidos da literatura brasileira.</p>
+                    <a href="../analises/no-meio-do-caminho.html" class="btn btn-dark">Ler análise</a>
                 </div>
             </div>
         </div>
 
+        <!-- Quadrilha -->
         <div class="col-md-4">
             <div class="card mb-4">
-                <img src="../imagens/temas/cronicas2.jpg" class="card-img-top">
+                <img src="../img/Capa livros/poemas/quadrilha.jpg" class="card-img-top" alt="Quadrilha">
                 <div class="card-body">
-                    <h5>Cadeira de Balanço (1966)</h5>
-                    <p>Textos que misturam humor, crítica e observação social.</p>
-                    <a href="#" class="btn btn-dark">Ler análise</a>
+                    <h5>Quadrilha</h5>
+                    <p>Humor, ritmo e crítica social num poema clássico do modernismo.</p>
+                    <a href="../analises/quadrilha.html" class="btn btn-dark">Ler análise</a>
                 </div>
             </div>
         </div>
 
+        <!-- Poema de Sete Faces -->
         <div class="col-md-4">
             <div class="card mb-4">
-                <img src="../imagens/temas/cronicas3.jpg" class="card-img-top">
+                <img src="../img/Capa livros/poemas/poema-de-sete-faces.jpg" class="card-img-top" alt="Poema de Sete Faces">
                 <div class="card-body">
-                    <h5>O Observador no Escritório</h5>
-                    <p>Crônicas urbanas que revelam o olhar atento do autor.</p>
-                    <a href="#" class="btn btn-dark">Ler análise</a>
+                    <h5>Poema de Sete Faces</h5>
+                    <p>Identidade, humor e existencialismo no poema que abre “Alguma Poesia”.</p>
+                    <a href="../analises/poema-de-sete-faces.html" class="btn btn-dark">Ler análise</a>
                 </div>
             </div>
         </div>
 
     </div>
 </section>
+<!-- ========================================== -->
 
+
+<!-- ================= FOOTER ================= -->
 <footer class="bg-dark text-white text-center py-4 mt-5">
     <p class="fw-bold mb-1">Portal Drummond</p>
     <p class="small mb-0">© 2026 — Todos os direitos reservados</p>
 </footer>
+<!-- ========================================== -->
 
+
+<!-- ================= CHATBOT ================= -->
 <button id="chatbot-btn">💬</button>
+
 <div id="chatbot-box">
     <div id="chatbot-messages"></div>
+
     <div id="chatbot-input-area">
         <input type="text" id="chatbot-input" placeholder="Escreva aqui...">
         <button id="chatbot-send">➤</button>
     </div>
 </div>
+<!-- ========================================== -->
 
-<script src="../js/chatbot.js"></script>
+
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Scripts -->
+<script src="../js/chatbot.js"></script>
 
 </body>
 </html>
