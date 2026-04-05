@@ -1,0 +1,297 @@
+/* =========================================================
+   PORTAL DRUMMOND — STYLE.CSS (VERSÃO OTIMIZADA)
+   ========================================================= */
+
+/* ------------------------------
+   PALETA DE CORES
+   ------------------------------ */
+:root {
+    --cor-primaria: #1B3A5C;
+    --cor-secundaria: #C9A84C;
+    --cor-fundo: #F8F9FA;
+    --cor-texto: #222222;
+    --sombra-suave: 0 4px 12px rgba(0,0,0,0.15);
+    --transicao: 0.3s ease;
+}
+
+/* ------------------------------
+   TIPOGRAFIA GLOBAL
+   ------------------------------ */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--cor-primaria);
+}
+
+/* ------------------------------
+   NAVBAR
+   ------------------------------ */
+.navbar {
+    background-color: var(--cor-primaria) !important;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-size: 1rem;
+    margin-left: 10px;
+    transition: color var(--transicao);
+}
+
+.nav-link:hover {
+    color: var(--cor-secundaria) !important;
+}
+
+.nav-link:focus {
+    outline: 2px solid var(--cor-secundaria);
+    outline-offset: 2px;
+}
+
+/* ------------------------------
+   CARROSSEL
+   ------------------------------ */
+.carousel-caption h2 {
+    background: rgba(0, 0, 0, 0.55);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* ------------------------------
+   CARDS
+   ------------------------------ */
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    /* Define a cor azul de fundo que vai "pintar" a imagem */
+    background-color: var(--cor-primaria); 
+    box-shadow: var(--sombra-suave);
+    transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    
+    /* O SEGREDO: Mistura a imagem com o azul do fundo do card */
+    mix-blend-mode: luminosity; 
+    opacity: 0.9;
+    
+    /* Filtro para garantir que o azul prevaleça */
+    filter: brightness(0.8) contrast(1.2);
+    
+    transition: all 0.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--sombra-hover);
+    /* No hover, removemos a cor de fundo azul para revelar a original */
+    background-color: transparent; 
+}
+
+.card:hover img {
+    /* Remove o efeito de mistura e os filtros no hover */
+    mix-blend-mode: normal;
+    filter: grayscale(0%) brightness(1) contrast(1);
+    opacity: 1;
+    transform: scale(1.05);
+}
+/* ------------------------------
+   BOTÕES
+   ------------------------------ */
+.btn-dark {
+    background-color: var(--cor-primaria);
+    border: none;
+    transition: background-color var(--transicao), color var(--transicao);
+}
+
+.btn-dark:hover {
+    background-color: var(--cor-secundaria);
+    color: #000;
+}
+
+.btn-dark:focus {
+    outline: 2px solid var(--cor-secundaria);
+    outline-offset: 2px;
+}
+
+/* ------------------------------
+   FILTRO DE TEMAS
+   ------------------------------ */
+.tema {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.tema.oculto {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+}
+
+/* ------------------------------
+   PARALLAX
+   ------------------------------ */
+.parallax {
+    background-image: url('../img/banner.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.parallax h2 {
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 5px;
+}
+
+/* ------------------------------
+   FORMULÁRIOS
+   ------------------------------ */
+form label {
+    font-weight: 600;
+}
+
+form input,
+form textarea,
+form select {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+}
+
+form button {
+    padding: 10px 25px;
+}
+
+/* ------------------------------
+   FOOTER
+   ------------------------------ */
+footer {
+    background-color: var(--cor-primaria);
+    padding: 20px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color var(--transicao);
+}
+
+footer a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* ------------------------------
+   SLIDESHOW DE CAPAS
+   ------------------------------ */
+.slideshow-container {
+    position: relative;
+    max-width: 500px;
+    max-height: 600px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.obra-slide {
+    display: none; 
+}
+
+.obra-slide {
+    display: block;
+    animation: fade 0.8s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+.slideshow-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color var(--transicao);
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: var(--cor-primaria);
+}
+
+/* ------------------------------
+   CHATBOT FIXO
+   ------------------------------ */
+#chatbot-btn,
+#chatbot-box {
+    position: fixed !important;
+    z-index: 9999 !important;
+}
+
+#chatbot-btn {
+    bottom: 25px !important;
+    right: 25px !important;
+}
+
+#chatbot-box {
+    bottom: 100px !important;
+    right: 25px !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+/* ------------------------------
+   RESPONSIVIDADE
+   ------------------------------ */
+@media (max-width: 768px) {
+    .carousel-caption h2 {
+        font-size: 1.2rem;
+    }
+
+    .parallax {
+        height: 250px;
+        background-attachment: scroll;
+    }
+
+    .slide img {
+        height: 260px;
+    }
+}
