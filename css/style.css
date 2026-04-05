@@ -24,6 +24,14 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+
+    min-height: 100vh;
+
+    flex-direction: column;
+}
+
+main {
+    min-height: 76.7vh;
 }
 
 h1, h2, h3, h4, h5 {
@@ -192,6 +200,7 @@ form button {
 footer {
     background-color: var(--cor-primaria);
     padding: 20px 0;
+    
 }
 
 footer a {
@@ -257,24 +266,30 @@ footer a:hover {
     background-color: var(--cor-primaria);
 }
 
+
+
 /* ------------------------------
-   CHATBOT FIXO
+   CHATBOT FIXO (CORRIGIDO)
    ------------------------------ */
-#chatbot-btn,
+#chatbot-btn {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 10000 !important; /* Valor alto para ficar acima do footer */
+    /* ... mantenha o restante do seu estilo (width, height, etc) ... */
+}
+
 #chatbot-box {
     position: fixed !important;
-    z-index: 9999 !important;
-}
-
-#chatbot-btn {
-    bottom: 25px !important;
-    right: 25px !important;
-}
-
-#chatbot-box {
-    bottom: 100px !important;
-    right: 25px !important;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    bottom: 90px !important; /* Fica acima do botão */
+    right: 20px !important;
+    z-index: 10000 !important;
+    display: none; /* Só aparece via JS */
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    background: white;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
     border-radius: 10px;
 }
 
