@@ -120,6 +120,11 @@ h1, h2, h3, h4, h5 {
     opacity: 1;
     transform: scale(1.05);
 }
+
+.oculto {
+    display: none !important;
+}
+
 /* ------------------------------
    BOTÕES
    ------------------------------ */
@@ -275,8 +280,7 @@ footer a:hover {
     position: fixed !important;
     bottom: 20px !important;
     right: 20px !important;
-    z-index: 10000 !important; /* Valor alto para ficar acima do footer */
-    /* ... mantenha o restante do seu estilo (width, height, etc) ... */
+    z-index: 10000 !important; 
 }
 
 #chatbot-box {
@@ -292,6 +296,37 @@ footer a:hover {
     box-shadow: 0 5px 25px rgba(0,0,0,0.2);
     border-radius: 10px;
 }
+
+#chatbot-input-area {
+    display: flex;
+    justify-content: center;   /* Centraliza horizontalmente */
+    align-items: center;       /* Alinha verticalmente */
+    gap: 10px;                 /* Espaço entre input e botão */
+    padding: 10px;
+}
+
+#chatbot-messages {
+    padding: 10px;
+    overflow-y: auto;
+    height: 280px;
+}
+
+.msg-user {
+    background: #d1e7dd;
+    padding: 8px 12px;
+    margin: 6px 0;
+    border-radius: 8px;
+    text-align: right;
+}
+
+.msg-bot {
+    background: #f8d7da;
+    padding: 8px 12px;
+    margin: 6px 0;
+    border-radius: 8px;
+    text-align: left;
+}
+
 
 /* ------------------------------
    RESPONSIVIDADE

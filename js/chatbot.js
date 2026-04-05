@@ -3,6 +3,19 @@
    Chat simples com palavras‑chave em JavaScript puro
    ========================================================= */
 
+document.addEventListener("DOMContentLoaded", function () {
+
+    const botao = document.getElementById("chatbot-btn");
+    const caixa = document.getElementById("chatbot-box");
+
+    botao.addEventListener("click", function () {
+        caixa.style.display = (caixa.style.display === "block") ? "none" : "block";
+    });
+
+});
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const botao = document.getElementById("chatbot-btn");
@@ -85,3 +98,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
